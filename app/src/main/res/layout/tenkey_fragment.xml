@@ -198,7 +198,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/change1_button"
-            android:text="arrow"
+            android:text="qwe"
             android:layout_weight="1"/>
         <Button
             android:layout_width="0dp"
