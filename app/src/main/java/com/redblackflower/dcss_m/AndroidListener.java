@@ -14,7 +14,7 @@ public class AndroidListener implements View.OnClickListener{
     public AndroidListener(ShiftCtrlListener scl){
         shift_ctrl_listener = scl;
         key_table = new HashMap<>();
-        key_table.put(R.id.back_button, KeyEvent.KEYCODE_BACK);
+        key_table.put(R.id.back_button, KeyEvent.KEYCODE_DEL);
         key_table.put(R.id.tab_button, KeyEvent.KEYCODE_TAB);
         key_table.put(R.id.delete_button,KeyEvent.KEYCODE_FORWARD_DEL);
         key_table.put(R.id.cap_button, KeyEvent.KEYCODE_CAPS_LOCK);
