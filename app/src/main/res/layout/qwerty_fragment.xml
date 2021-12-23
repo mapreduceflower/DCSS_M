@@ -145,7 +145,7 @@
             android:layout_height="match_parent"
             android:id="@+id/a_button"
             android:text="a"
-            android:layout_weight="1.5"/>
+            android:layout_weight="1"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -193,7 +193,7 @@
             android:layout_height="match_parent"
             android:id="@+id/l_button"
             android:text="l"
-            android:layout_weight="1.5"/>
+            android:layout_weight="1"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -260,6 +260,30 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/ctrl_button"
+            android:text="ctrl"
+            android:layout_weight="1.5"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/change2_button"
+            android:text="arrow"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/space_button"
+            android:text="space"
+            android:layout_weight="6"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/enter_button"
+            android:text="enter"
+            android:layout_weight="1.5"/>
 
     </LinearLayout>
 

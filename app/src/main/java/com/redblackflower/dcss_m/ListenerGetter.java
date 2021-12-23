@@ -5,4 +5,5 @@ public interface ListenerGetter{
     ShiftCtrlListener getShiftCtrlListener();
     AndroidListener getAndroidListener();
     ScriptListener getScriptListener();
+    FragmentListener getFragmentListener();
 }

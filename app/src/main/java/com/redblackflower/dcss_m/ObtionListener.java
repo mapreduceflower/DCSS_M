@@ -5,18 +5,20 @@ import android.webkit.WebView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class ObtionListener implements View.OnClickListener{
 
     private WebView web_view;
-    private Fragment keyboard_fragment;
+    private Fragment qwerty_fragment, tenkey_fragment;
     private FragmentManager keyboard_manager;
     private double zoom_size;
     private boolean keyboard_visible;
 
-    public ObtionListener(WebView wb, Fragment kf, FragmentManager fm){
+    public ObtionListener(WebView wb, Fragment qf, Fragment tf, FragmentManager fm){
         web_view = wb;
-        keyboard_fragment = kf;
+        qwerty_fragment = qf;
+        tenkey_fragment = tf;
         keyboard_manager = fm;
         zoom_size = 1.00;
         keyboard_visible = true;
@@ -42,11 +44,14 @@ public class ObtionListener implements View.OnClickListener{
 
     public void KeyboardVisibility(){
         if (keyboard_visible == true){
-            keyboard_manager.beginTransaction().hide(keyboard_fragment).commit();
+            FragmentTransaction fragmentTransaction = keyboard_manager.beginTransaction();
+            fragmentTransaction.hide(qwerty_fragment);
+            fragmentTransaction.hide(tenkey_fragment);
+            fragmentTransaction.commit();
             keyboard_visible = false;
         }
         else {
-            keyboard_manager.beginTransaction().show(keyboard_fragment).commit();
+            keyboard_manager.beginTransaction().show(tenkey_fragment).commit();
             keyboard_visible = true;
         }
     }

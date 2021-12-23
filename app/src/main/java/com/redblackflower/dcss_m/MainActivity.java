@@ -13,11 +13,12 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements ListenerGetter {
 
     private WebView web_view;
-    private Fragment keyboard_fragment;
+    private Fragment qwerty_fragment, tenkey_fragment;
     private Button esc_button, zoomin_button, zoomout_button, keyboard_button;
     private ObtionListener obtion_listener;
     private FragmentManager keyboard_manager;
 
+    private FragmentListener fragment_listener;
     private ShiftCtrlListener shift_ctrl_listener;
     private AsciiListener ascii_listener;
     private AndroidListener android_listener;
@@ -36,11 +37,13 @@ public class MainActivity extends AppCompatActivity implements ListenerGetter {
         android_listener = new AndroidListener(shift_ctrl_listener);
         script_listener = new ScriptListener(web_view,shift_ctrl_listener);
 
-        keyboard_fragment = new KeyboardFragment();
+        qwerty_fragment = new QwertyFragment();
+        tenkey_fragment = new TenkeyFragment();
         keyboard_manager = getSupportFragmentManager();
-        FragmentSetting(keyboard_fragment, keyboard_manager);
+        FragmentSetting(qwerty_fragment, tenkey_fragment, keyboard_manager);
 
-        obtion_listener = new ObtionListener(web_view, keyboard_fragment, keyboard_manager);
+        fragment_listener = new FragmentListener(qwerty_fragment, tenkey_fragment, keyboard_manager);
+        obtion_listener = new ObtionListener(web_view, qwerty_fragment, tenkey_fragment, keyboard_manager);
 
         esc_button = (Button) findViewById(R.id.esc_button);
         zoomin_button = (Button) findViewById(R.id.zoomin_button);
@@ -67,9 +70,11 @@ public class MainActivity extends AppCompatActivity implements ListenerGetter {
         wb.loadUrl(url);
     }
 
-    public void FragmentSetting(Fragment kf, FragmentManager fm){
+    public void FragmentSetting(Fragment qf,Fragment tf, FragmentManager fm){
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.add(R.id.screen_container, kf);
+        fragmentTransaction.add(R.id.screen_container, qf);
+        fragmentTransaction.add(R.id.screen_container, tf);
+        fragmentTransaction.hide(qf);
         fragmentTransaction.commit();
     }
 
@@ -86,4 +91,7 @@ public class MainActivity extends AppCompatActivity implements ListenerGetter {
 
     @Override
     public ScriptListener getScriptListener() {return script_listener;}
+
+    @Override
+    public FragmentListener getFragmentListener() {return fragment_listener;}
 }

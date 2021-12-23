@@ -4,55 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="?attr/actionBarSize"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal">
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:id="@+id/esc_button"
             android:text="x"
             android:layout_weight="1"/>
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:id="@+id/zoomin_button"
             android:text="+"
             android:layout_weight="1"/>
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:id="@+id/zoomout_button"
             android:text="-"
             android:layout_weight="1"/>
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:id="@+id/keyboard_button"
             android:text="T"
             android:layout_weight="1"/>
     </LinearLayout>
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <WebView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
             android:id="@+id/web_view"/>
 
         <FrameLayout
             android:id="@+id/screen_container"
             android:layout_width="match_parent"
-            android:layout_height="270dp"
-            android:layout_gravity="bottom" />
-
-    </FrameLayout>
-
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:layout_gravity="bottom"/>
+    </LinearLayout>
 
 </LinearLayout>
