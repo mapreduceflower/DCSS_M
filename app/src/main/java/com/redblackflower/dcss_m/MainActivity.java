@@ -10,7 +10,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements KeyboardFragment.ListenerGetter {
+public class MainActivity extends AppCompatActivity implements ListenerGetter {
 
     private WebView web_view;
     private Fragment keyboard_fragment;

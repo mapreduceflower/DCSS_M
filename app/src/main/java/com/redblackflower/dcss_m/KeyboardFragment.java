@@ -17,13 +17,6 @@ public class KeyboardFragment extends Fragment {
     private AndroidListener android_listener;
     private ScriptListener script_listener;
 
-    public interface ListenerGetter{
-        AsciiListener getAsciiListener();
-        ShiftCtrlListener getShiftCtrlListener();
-        AndroidListener getAndroidListener();
-        ScriptListener getScriptListener();
-    }
-
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
