@@ -1,10 +1,12 @@
 package com.redblackflower.dcss_m;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -76,6 +78,25 @@ public class MainActivity extends AppCompatActivity implements ListenerGetter {
         fragmentTransaction.add(R.id.screen_container, tf);
         fragmentTransaction.hide(qf);
         fragmentTransaction.commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder dlg = new AlertDialog.Builder(MainActivity.this);
+        dlg.setMessage("wanna exit, press yes");
+        dlg.setPositiveButton("yes", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                MainActivity.super.onBackPressed();
+            }
+        });
+        dlg.setNegativeButton("no", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                return;
+            }
+        });
+        dlg.show();
     }
 
     @Override
