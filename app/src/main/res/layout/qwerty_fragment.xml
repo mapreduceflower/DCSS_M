@@ -271,13 +271,13 @@
             android:layout_height="match_parent"
             android:id="@+id/change2_button"
             android:text="arrow"
-            android:layout_weight="1"/>
+            android:layout_weight="1.5"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/space_button"
             android:text="space"
-            android:layout_weight="6"/>
+            android:layout_weight="5.5"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"

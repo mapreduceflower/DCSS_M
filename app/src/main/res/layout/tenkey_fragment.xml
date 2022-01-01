@@ -193,31 +193,37 @@
             android:layout_height="match_parent"
             android:id="@+id/ctrl2_button"
             android:text="ctrl"
-            android:layout_weight="1"/>
+            android:layout_weight="1.5"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/change1_button"
             android:text="qwe"
-            android:layout_weight="1"/>
+            android:layout_weight="1.5"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/m_next_button"
             android:text=",	&lt;"
-            android:layout_weight="1"/>
+            android:layout_weight="1.8"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/m_nextnext_button"
             android:text=".&gt;"
-            android:layout_weight="1"/>
+            android:layout_weight="1.8"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/m_nextnextnext_button"
             android:text="/?"
-            android:layout_weight="1"/>
+            android:layout_weight="1.8"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/enter2_button"
+            android:text="enter"
+            android:layout_weight="1.5"/>
     </LinearLayout>
 
 </LinearLayout>

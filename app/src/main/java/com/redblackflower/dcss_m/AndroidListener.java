@@ -19,6 +19,7 @@ public class AndroidListener implements View.OnClickListener{
         //key_table.put(R.id.delete_button,KeyEvent.KEYCODE_FORWARD_DEL);
         key_table.put(R.id.cap_button, KeyEvent.KEYCODE_CAPS_LOCK);
         key_table.put(R.id.enter_button,KeyEvent.KEYCODE_ENTER);
+        key_table.put(R.id.enter2_button,KeyEvent.KEYCODE_ENTER);
         //key_table.put(R.id.win_button,KeyEvent.KEYCODE_WINDOW);
         //key_table.put(R.id.alt_button,KeyEvent.KEYCODE_ALT_LEFT);
         key_table.put(R.id.space_button,KeyEvent.KEYCODE_SPACE);

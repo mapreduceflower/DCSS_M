@@ -50,6 +50,7 @@ public class TenkeyFragment extends Fragment {
         v.findViewById(R.id.m_next_button).setOnClickListener(ascii_listener);
         v.findViewById(R.id.m_nextnext_button).setOnClickListener(ascii_listener);
         v.findViewById(R.id.m_nextnextnext_button).setOnClickListener(ascii_listener);
+        v.findViewById(R.id.enter2_button).setOnClickListener(android_listener);    //android
         v.findViewById(R.id.shift2_button).setOnClickListener(shift_ctrl_listener); //  scl
         v.findViewById(R.id.ctrl2_button).setOnClickListener(shift_ctrl_listener);  //scl
         v.findViewById(R.id.seven_ten_button).setOnClickListener(script_listener);  //script
